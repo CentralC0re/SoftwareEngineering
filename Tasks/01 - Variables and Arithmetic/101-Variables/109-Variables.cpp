@@ -8,13 +8,14 @@ int main()
 	int age = 23;				// Integer
 	long bigNumber = 123456789;	// Long integer
 	long long veryBigNumber = 1LL << 30;	//2^30 - challenge (advanced), why have I put 1LL?
+	// LL Refers to "long long", it specifies the number is not an integer
 
 	printf("c=%d\n", c);
 	printf("year = %hd\n", year);
 	printf("age = %d\n", age);
 	printf("bigNumber = %ld\n", bigNumber);
 	printf("veryBigNumber = %lld\n", veryBigNumber);
-
+	
 	//Addition
 	int ageNextYear;
 	ageNextYear = age + 1;

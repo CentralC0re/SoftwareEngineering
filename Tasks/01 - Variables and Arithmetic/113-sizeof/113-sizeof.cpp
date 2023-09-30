@@ -27,5 +27,10 @@ int main()
 	//TASK: Display the size of ALL the integer data types
 	// Write your solution below here. The first one is done for you.
 	printf("char\t\t%llu\n", sizeof(char));	//sizeof() returns a value of type unsigned long long
+	printf("short\t\t%llu\n", sizeof(short));
+	printf("int\t\t%llu\n", sizeof(int));
+	printf("long\t\t%llu\n", sizeof(long));
+	printf("long long\t\t%llu\n", sizeof(long long));
+	printf("unsigned long long\t\t%llu\n", sizeof(unsigned long long));
 
-}
+	}
