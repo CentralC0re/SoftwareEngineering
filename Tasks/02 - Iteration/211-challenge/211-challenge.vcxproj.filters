@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="209-break-keyword.cpp">
+    <ClCompile Include="211-challenge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
