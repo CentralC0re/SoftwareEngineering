@@ -41,16 +41,23 @@ int main()
     // **************************************************************************
     // TASK 1 - calculate and display the SUM of all elements in the array nums *
     // **************************************************************************
-
-    //Write task 1 solution here
+    cout << "\n";
     int64_t sum = 0L;   //Result needs to be bigger than int to avoid overflow
+    for (unsigned int n = 0; n < N; n++)    // The int doesn't need to be unsigned, but it doubles capacity
+    {
+        sum += nums[n];
+    }
+    cout << sum << "\n"; // Total is 617
+
 
 
     // ***********************************************************************************************************************
     // TASK 2 - calculate the mean of all elements (this will be a fractional value) and display to 1 decimal place accuracy *
     // ***********************************************************************************************************************
 
-    //Write task 2 solution here
+    float mean = sum / N;
+    cout.precision(1);  // This is taken from the solution, because I have no idea how to limit d.p. outside of with printf
+    cout << "Mean = " << std::fixed << mean;
 
 }
 

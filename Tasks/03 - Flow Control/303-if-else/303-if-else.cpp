@@ -32,22 +32,26 @@ int main()
     } while ((level < 0) || (level > 100)); //Repeat until a valid number is entered
 
     //Additional boundary check
-    if (level == 0) {
+    if (level == 0) 
+    {
         cout << "Tank is empty" << endl;
     }
-
-    if (level <= low)                       // check the level
+    else if (level <= low)                       // check the level
     {
         cout << "Tank needs filling" << endl;
+        cout << "Tank is not empty" << endl;
     }
     else
     {
         cout << "Tank has sufficient fuel for now" << endl;
-    }
-
-    if (level == high)                       // monitor the level
-    {
-        cout << "Tank is full" << endl;
+        if (level == high)                       // monitor the level   Merged here because it can only be full if it has sufficient fuel
+        {
+            cout << "Tank is full" << endl;
+        }
+        else
+        {
+            cout << "Tank is not full" << endl;
+        }
     }
 
 }
