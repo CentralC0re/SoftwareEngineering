@@ -13,5 +13,8 @@ int main()
 	cout << "Number of multiplications performed: " << getCount() << endl;
 
 	// Task - uncomment this and try to build the code
-	//updateArea(r1);
+	updateArea(r1);
+	// Code is undefined. updateArea is not prototyped in the header file.
+	// This has been fixed
+	// Normally, updateArea is called in Rect_t. It's effectively private.
 }

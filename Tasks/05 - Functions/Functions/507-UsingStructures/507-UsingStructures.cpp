@@ -12,6 +12,7 @@ struct Point {
 void displayPoint(Point p);
 float calculateLength(Point p);
 Point flipPoint(Point p);
+Point addPoint(Point p1, Point p2);
 
 
 int main()
@@ -48,6 +49,9 @@ int main()
     Point p4 = flipPoint(p3);
     displayPoint(p4);               //Showing p4
 
+    Point p5 = addPoint(p1, p2);
+    displayPoint(p5);
+
 }
 
 
@@ -75,4 +79,21 @@ Point flipPoint(Point p)
     result.y = p.x;
     result.length = p.length;
     return result;
+}
+
+// Add two structures
+Point addPoint(Point p1, Point p2)
+{
+    int x1 = p1.x;
+    int x2 = p2.x;
+
+    int y1 = p1.y;
+    int y2 = p2.y;
+
+    float l1 = p1.length;
+    float l2 = p2.length;
+
+    Point p3 = {x1+x2, y1+y2, l1+l2};
+    return p3;  // The best way to return multiple values from a
+                // function is often to use a struct
 }
