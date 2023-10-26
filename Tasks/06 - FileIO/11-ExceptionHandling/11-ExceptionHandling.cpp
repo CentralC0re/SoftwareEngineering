@@ -48,9 +48,17 @@ int main()
             iss >> nextWord;
             if (!iss.fail()) {
                 //Convert a string to an integer
-                moduleNumber = stoi(nextWord);
-                //Write the new module code
-                cout << "COMP" << moduleNumber + 1 << endl;
+                try {
+                    moduleNumber = stoi(nextWord);  // Fail location
+
+                    //Write the new module code
+                    cout << "COMP" << moduleNumber + 1 << endl; // Needed in here because of scope
+                }
+                catch (exception e){
+                    cerr << "Integer conversion or output failed with error: " << e.what() << endl;
+                    return -1;
+                }
+
                 //We are done! Break from the outer loop
                 break;
             }
@@ -77,7 +85,7 @@ void createFile(string fn)
     outputStream << "Subject Area: " << "COMP" << endl;
 
     //We've switched to Roman Numerals - did I mention that in my last email?
-    outputStream << "Module ID: " << "M" << endl;
+    outputStream << "Module ID: " << "M" << endl;       // Not an int, breaking everything else
 
     // (iii) Close
     outputStream.close();

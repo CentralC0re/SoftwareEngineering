@@ -13,10 +13,10 @@ int main()
 
     // First open the file for write (use type ofstream)
     ofstream outputStream;
-    outputStream.open("myfile.txt");
+    outputStream.open("myfile.txt");    // mFunct 1
 
     //Check to see if it worked
-    if (outputStream.is_open() == false) {
+    if (outputStream.is_open() == false) {  // mFunct 2
         cerr << "Cannot create the file" << endl;
         return -1;
     }
@@ -26,5 +26,7 @@ int main()
     outputStream << "-----" << endl;
 
     //Close
-    outputStream.close();
+    outputStream.close();   // mFunct 3
+
+    // fstream is used to enable file streams. Otherwise the code would not be able to write to or read from a file
 }

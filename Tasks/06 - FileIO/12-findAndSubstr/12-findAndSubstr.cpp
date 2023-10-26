@@ -26,17 +26,24 @@ int main()
     //Display
     cout << dataString << endl;
 
+    int areaPos = dataString.find("Area:");
+    string afterArea = dataString.substr(areaPos);
+    int endLine = afterArea.find("\n");
+    string areaVal = dataString.substr(areaPos, endLine);
+    cout << areaVal << endl;
+
+
     // Find the substring "ID:"
-    int pos = dataString.find("ID:");
-    if (pos == -1) {
+    int IDPos = dataString.find("ID:");
+    if (IDPos == -1) {
         cerr << "Identifier ID: is missing from file" << endl;
         return -1;
     }
 
     //Now extract the string from this point forwards
-    cout << "Found \"ID:\" at character position " << pos << endl;
-    string previous  = dataString.substr(0, pos);   //Up to the location pos-1
-    string following = dataString.substr(pos);      //From pos to the end
+    cout << "Found \"ID:\" at character position " << IDPos << endl;
+    string previous  = dataString.substr(0, IDPos);   //Up to the location pos-1
+    string following = dataString.substr(IDPos);      //From pos to the end
 
     //Now read the next two words
     istringstream iss(following);   //From ID: onwards

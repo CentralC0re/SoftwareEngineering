@@ -21,7 +21,7 @@ int main()
     if (errCode != 0) {
         cerr << "Error: " << errCode << endl;
         return errCode;
-    } 
+    }
 
     // Parse String word by word
     istringstream iss(dataString);
@@ -44,9 +44,11 @@ int main()
         //Look for the string that comes before the module code
         if (nextWord == "ID:") {
             cout << "Found \"ID:\". The code should be next...." << endl;
-            //TODO:
-            // Read the next word
-            // If successful, try to convert to an integer then break from the while loop
+            string codeStr;
+            iss >> codeStr;
+            int code = stoi(codeStr);
+            code++;
+            cout << code << endl;
         }
     }
 

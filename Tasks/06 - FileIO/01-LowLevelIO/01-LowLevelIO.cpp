@@ -46,9 +46,9 @@ int main()
         return -1;
     }
     fprintf(outputStream, "12345\n");                   // This is the exact same line as before!
-    fclose(outputStream);                               // Never try and close stdout!
+    fclose(outputStream);                               // Never try and close stdout!  - Closing it causes an error box to pop up from VS, before crashing the program.
 
-    // We could also have a stream that connects to other destinatons, such as a device or a network socket
+    // We could also have a stream that connects to other destinations, such as a device or a network socket
 
     // For input, the same concept applies
     FILE* inputStream = stdin;
