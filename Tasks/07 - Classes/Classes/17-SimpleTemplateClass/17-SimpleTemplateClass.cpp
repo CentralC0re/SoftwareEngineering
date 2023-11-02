@@ -9,13 +9,13 @@ int main() {
     cout << std::fixed;
     
     //First - a pair of integers
-    Point p1(4, 5);
+    Point2<float> p1(4, 5);			// Point 2 is a template. It can take whatever datatype is reasonable, such as int and float
     p1.display();
     cout << p1.max() << endl;
 
     //Now, let's consider a pair of floats
-    Point p2(4.0f, 4.5f);
-    p2.display();
+    Point2<float> p2(4.0f, 4.5f);
+    p2.display();				// Though value 2 is 4.5, it is output as 4. This is because the class is designed for integers
     cout << p2.max() << endl;
 
 }

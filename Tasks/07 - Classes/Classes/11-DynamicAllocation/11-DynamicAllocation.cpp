@@ -15,7 +15,7 @@ int main()
     Rect r0(2.0f, 3.0f, "static");
 
     //Dynamic allocation with new
-    r1 = new Rect(3.0f, 4.0f, "dynamic");
+    r1 = new Rect(3.0f, 4.0f, "dynamic");	// Constructor executed
     if (r1) {
         cout << "Successfully allocated memory for a Rect" << endl;
     }
@@ -31,7 +31,7 @@ int main()
 
     //Free up memory NOW 
     if (r1) {           // Illustrating a more defensive coding style
-        delete r1;      // Free up memory with start address r1
+        delete r1;      // Free up memory with start address r1			Destructor executed
         r1 = nullptr;   // Set to null to we can perform run-time checks
     }
 
