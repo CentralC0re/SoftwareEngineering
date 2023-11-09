@@ -27,6 +27,20 @@ public:
         //Read only copy returned as = does a copy for string
         return _name;
     }
+
+    void setAge(int age) {
+        if (age >= 0 && age <= 30) {
+            _age = age;
+            cout << "Changed age to " << age << endl;
+        }
+        else {
+            cout << "Failed to change age, out of range" << endl;
+        }
+    }
+
+    int getAge() {
+        return _age;
+    }
 };
 
 
@@ -67,4 +81,8 @@ int main()
     Pet p1("Carrot", 2);
     Dog d1("Scrapper", 5);
     Cat c1("Furry", 3);
+
+    cout << d1.getAge() << endl;
+    c1.setAge(d1.getAge());
+    d1.setAge(50);
 }

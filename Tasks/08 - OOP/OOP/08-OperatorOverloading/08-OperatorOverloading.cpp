@@ -34,11 +34,11 @@ public:
         cout << "Case set up for " << _client.getName() << endl;
     }
 
-    void operator += (float cost)
-    {
+    void operator += (float cost)       // These overload the operator, allowing for it to
+    {                                   // be used unconventionally
         addCharge(cost);
-    }
-
+    }                                   // Don't use these for stupid reasons. Only use them
+                                        // if it makes sense
     void operator += (vector<float> costs)
     {
         addCharge(costs);
@@ -71,6 +71,8 @@ int main()
     charges.push_back(225.0f);
     charges.push_back(100.0f);
     case1 += charges;
+
+    // There is no need to have an addCharge function, as it can be performed through the operator instead.
 
     cout << case1.generateStatement();
 }

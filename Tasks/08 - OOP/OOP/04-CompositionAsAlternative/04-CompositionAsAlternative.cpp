@@ -13,7 +13,7 @@ private:
 
 public:
     // Constructor - note the initialisation list ensure _client is instantiated before the constructor runs 
-    MedicalCase(string name, int age, int vid) : _client(name, age)
+    MedicalCase(string name, int age, int vid) : _client(name, age) // You must put this here, it cannot be done later
     {
         _vetID = vid;
         _bill = 0.0f;

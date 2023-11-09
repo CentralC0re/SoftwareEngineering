@@ -30,7 +30,13 @@ public:
 
     // For a list of items
     void addCharge(vector<float> costs) {
-        //COMPLETE THIS
+        if (costs[0] > 0.0) {
+            while (!costs.empty())
+            {
+                _bill += costs.back();
+                costs.pop_back();
+            }
+        }
 
     }
 
