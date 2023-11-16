@@ -14,6 +14,8 @@ class ModuleRecord
 public:
 	// Constructor
 	ModuleRecord(string name, string area, unsigned int code, unsigned int credits, unsigned int semesters);
+
+	ModuleRecord(); // DO NOT USE
 	
 	string ModuleSummary();
 

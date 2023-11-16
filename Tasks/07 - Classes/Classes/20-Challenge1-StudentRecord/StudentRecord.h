@@ -24,6 +24,14 @@ public:
 		updateFullName();
 	}
 
+	StudentRecord() {	// DO NOT USE
+		//Default constructor because C++ wants it in 24 for some reason
+		studentFirstName = "";
+		studentLastName = "";
+		studentID = 0;
+		fullName = "";
+	}
+
 	//Display details about the student in the terminal, including ID and full name
 	void display() {
 		cout << "Name: " << fullName << "\t" << "ID: " << studentID << endl;

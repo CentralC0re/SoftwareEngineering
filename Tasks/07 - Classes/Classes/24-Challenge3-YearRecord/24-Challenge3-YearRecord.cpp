@@ -3,19 +3,35 @@
 //
 
 #include <iostream>
+#include "YearRecord.h"
+
+void StudentResult(int result);
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    YearRecord myRecord(1, 2);  // Note: setting student number to anything greater than the true number
+                                // causes a vector subscript error at StudentCheck
+    ModuleRecord mod1("COMP", "Computing", 1000, 60, 2);
+    myRecord.AddModule(mod1);
+
+    StudentRecord stu1("Jim", "Jimley", 37);
+    myRecord.AddStudent(stu1);
+
+    StudentRecord stu2("James", "Jimley", 38);
+    StudentResult(myRecord.StudentCheck(stu1));
+
+    StudentResult(myRecord.StudentCheck(stu2));
+   
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+void StudentResult(int result) {
+    if (result == 1) {
+        cout << "Found student\n";
+    }
+    else if (result == 0) {
+        cout << "Could not find student\n";
+    }
+    else {
+        cout << "Error finding student\n";
+    }
+}

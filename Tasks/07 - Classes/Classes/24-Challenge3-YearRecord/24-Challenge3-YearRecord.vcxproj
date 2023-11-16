@@ -104,6 +104,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -127,7 +129,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\22-Challenge2-ModuleRecord\ModuleRecord.cpp" />
     <ClCompile Include="24-Challenge3-YearRecord.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\20-Challenge1-StudentRecord\StudentRecord.h" />
+    <ClInclude Include="..\22-Challenge2-ModuleRecord\ModuleRecord.h" />
+    <ClInclude Include="YearRecord.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
